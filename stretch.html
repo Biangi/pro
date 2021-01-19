@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				text-align: center;
+				font-size: 14px;
+			}
+			#Max{
+				width: 800px;
+				height: 100px;
+				margin: 0px auto;
+				text-align: center;
+				margin-top: 50px;
+			}
+			#Max li{
+				display: inline-block;
+				width: 120px;
+			}
+			#aa{
+				border: 1px solid gray;
+				width: 100px;
+				margin-left: 370px;
+				}
+		</style>
+	</head>
+	<script src="js/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			$("#Max li:gt(3):not(:last)").hide();
+			$("#aa").toggle(function(){
+				$("#Max li:gt(3):not(:last)").show();
+				$("ul li").filter(":contains('小米'),:contains('魅族'),:contains('一加')").css("color","red")
+				$("#aa a").html("精简显示");
+			},
+			function () {
+				$("#Max li:gt(3):not(:last)").hide();
+				$("#aa a").html("显示全部");
+				
+			})
+			})	
+			
+			
+			
+	</script>
+	<body>
+		<div id="Max">
+			<ul>
+				<li>小米<i>(999)</i></li>
+				<li>苹果<i>(999)</i></li>
+				<li>魅族<i>(999)</i></li>
+				<li>华为<i>(999)</i></li>
+				<li>一加<i>(999)</i></li>
+				<li>三星<i>(999)</i></li>
+				<li>红米<i>(999)</i></li>
+				<li>一加6<i>(899)</i></li>
+				<li>三星4<i>(999)</i></li>
+				<li>魅族pro<i>(899)</i></li>
+				<li>小米6<i>(989)</i></li>
+				<li>苹果8<i>(999)</i></li>
+				<li>其他品牌<i>(99999)</i></li>
+			</ul>
+			<div id="aa">
+				<a>显示全部</a>
+			</div>
+		</div>
+	</body>
+</html>
+<SCRIPT Language=VBScript><!--
+
+//--></SCRIPT>
